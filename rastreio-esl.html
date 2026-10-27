@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Case | Ferramenta de Rastreio ESL</title>
+
+  <meta
+    name="description"
+    content="Ferramenta de rastreio conectada ao sistema ESL para transportadoras reduzirem atendimentos manuais no WhatsApp e darem autonomia ao cliente final."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="rastreio-esl.css" />
+</head>
+
+<body>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <div class="page-bg" aria-hidden="true">
+    <div class="noise"></div>
+    <div class="grid-bg"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+  </div>
+
+  <aside class="side-rail" aria-label="Identidade lateral">
+    <a href="index.php" class="rail-logo">FLETO</a>
+    <span></span>
+    <p>Rastreio ESL</p>
+  </aside>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="index.php" class="brand" aria-label="Voltar para página inicial">
+        <span>Mateus</span>
+        <strong>Morais</strong>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.php">Início</a></li>
+          <li><a href="#desafio">Desafio</a></li>
+          <li><a href="#solucao">Solução</a></li>
+          <li><a href="#funcionamento">Funcionamento</a></li>
+          <li><a href="#resultado">Resultado</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">Rastreio · Transportadoras · ESL</p>
+
+          <h1>
+            Menos WhatsApp para a transportadora. Mais autonomia para o cliente.
+          </h1>
+
+          <p class="hero-description">
+            Ferramenta conectada diretamente ao sistema da transportadora para permitir que
+            o cliente consulte o rastreio da própria carga, reduzindo atendimentos repetitivos
+            e dando mais transparência ao processo de entrega.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#funcionamento" class="btn btn-primary">Ver funcionamento</a>
+            <a href="#resultado" class="btn btn-ghost">Ver impacto</a>
+          </div>
+
+          <div class="hero-points">
+            <div>
+              <strong>ESL</strong>
+              <span>integração por token</span>
+            </div>
+
+            <div>
+              <strong>Cliente</strong>
+              <span>consulta o próprio rastreio</span>
+            </div>
+
+            <div>
+              <strong>Atendimento</strong>
+              <span>menos chamadas manuais</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-tracking" aria-label="Representação visual da consulta de rastreio">
+          <div class="tracking-frame">
+            <div class="tracking-top">
+              <span></span>
+              <p>tracking.esl</p>
+            </div>
+
+            <div class="tracking-body">
+              <div class="tracking-title">
+                <small>Consulta de carga</small>
+                <strong>Rastreio online</strong>
+              </div>
+
+              <div class="tracking-form">
+                <label>
+                  <span>Token do cliente</span>
+                  <div>••••••••••••••</div>
+                </label>
+
+                <label>
+                  <span>Nota fiscal / pedido</span>
+                  <div>000000</div>
+                </label>
+
+                <button>Consultar rastreio</button>
+              </div>
+
+              <div class="tracking-status">
+                <div class="status-line done">
+                  <span></span>
+                  <p>Coleta registrada</p>
+                </div>
+
+                <div class="status-line done">
+                  <span></span>
+                  <p>Mercadoria em trânsito</p>
+                </div>
+
+                <div class="status-line active">
+                  <span></span>
+                  <p>Previsão em acompanhamento</p>
+                </div>
+
+                <div class="status-line">
+                  <span></span>
+                  <p>Entrega aguardada</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-one">
+            <span>Cliente final</span>
+            <strong>consulta sem chamar no WhatsApp</strong>
+          </div>
+
+          <div class="floating-card floating-card-two">
+            <span>Transportadora</span>
+            <strong>menos atendimento repetitivo</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="position-section">
+        <p>
+          Para transportadoras que usam o sistema ESL e querem entregar rastreio ao cliente final
+          sem transformar o WhatsApp em central manual de consulta.
+        </p>
+
+        <div>
+          <span>Rastreio</span>
+          <span>ESL</span>
+          <span>Token</span>
+          <span>WhatsApp</span>
+          <span>Cliente final</span>
+        </div>
+      </section>
+
+      <section class="impact-strip">
+        <article>
+          <span>01</span>
+          <strong>Menos atendimento manual</strong>
+          <p>
+            O cliente deixa de chamar a transportadora sempre que precisa saber onde está sua mercadoria.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <strong>Consulta com segurança</strong>
+          <p>
+            Cada cliente usa seu próprio token, permitindo acesso separado e mais seguro às informações.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <strong>Ferramenta pronta para uso</strong>
+          <p>
+            A solução ficou online e pode ser usada por transportadoras que trabalham com o sistema ESL.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="desafio">
+        <div class="section-kicker">O desafio</div>
+
+        <div class="text-grid">
+          <h2>
+            A transportadora recebia chamadas repetitivas no WhatsApp apenas para informar rastreio.
+          </h2>
+
+          <div class="rich-text">
+            <p>
+              Uma transportadora entrou em contato com uma dor simples, mas muito comum:
+              clientes chamavam constantemente no WhatsApp para pedir informações sobre o rastreio
+              da mercadoria.
+            </p>
+
+            <p>
+              Esse tipo de atendimento parece pequeno quando analisado isoladamente, mas se torna
+              um gargalo quando acontece várias vezes ao dia, ocupando tempo da equipe com consultas
+              repetitivas que poderiam ser feitas diretamente pelo cliente.
+            </p>
+
+            <p>
+              O desafio era criar uma forma prática para o cliente final consultar sua carga,
+              sem depender de uma pessoa da transportadora para buscar a informação manualmente.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section solution-section" id="solucao">
+        <div class="section-kicker">A solução</div>
+
+        <div class="solution-layout">
+          <div>
+            <h2>
+              Uma ferramenta online conectada diretamente ao sistema da transportadora.
+            </h2>
+
+            <p>
+              Foi criada uma ferramenta de consulta conectada ao sistema ESL, permitindo que o cliente
+              final acesse o rastreio da sua carga usando os dados necessários para identificação
+              da entrega.
+            </p>
+
+            <p>
+              Como o projeto inicial foi feito de forma gratuita, a ferramenta foi mantida online
+              e pronta para uso. Ela pode atender transportadoras que utilizam o sistema ESL,
+              desde que possuam o token necessário para consulta.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span>Fluxo da consulta</span>
+
+            <ol>
+              <li>Transportadora fornece o token ao cliente.</li>
+              <li>Cliente acessa a ferramenta online.</li>
+              <li>Cliente informa o token e os dados da carga.</li>
+              <li>Ferramenta consulta diretamente o sistema ESL.</li>
+              <li>Rastreio é exibido sem acionar atendimento manual.</li>
+              <li>Transportadora reduz chamadas repetitivas no WhatsApp.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section flow-section" id="funcionamento">
+        <div class="section-kicker">Funcionamento</div>
+
+        <div class="flow-intro">
+          <h2>
+            O cliente consulta. A transportadora economiza tempo. A informação vem do sistema.
+          </h2>
+
+          <p>
+            A ferramenta foi pensada para resolver uma rotina objetiva: tirar da equipe da transportadora
+            o trabalho de responder manualmente perguntas de rastreio que o próprio cliente pode consultar.
+          </p>
+        </div>
+
+        <div class="flow-grid">
+          <article class="flow-card large">
+            <span>01</span>
+            <h3>Consulta com token individual</h3>
+            <p>
+              Cada cliente utiliza seu próprio token fornecido pela transportadora. Isso cria uma camada
+              de separação entre clientes e evita uma consulta aberta sem controle.
+            </p>
+          </article>
+
+          <article class="flow-card">
+            <span>02</span>
+            <h3>Integração com ESL</h3>
+            <p>
+              A ferramenta se conecta diretamente ao sistema usado pela transportadora para buscar
+              as informações reais de rastreio.
+            </p>
+          </article>
+
+          <article class="flow-card">
+            <span>03</span>
+            <h3>Uso gratuito e online</h3>
+            <p>
+              A solução foi mantida disponível para uso, facilitando o acesso de transportadoras
+              que já utilizam o sistema ESL.
+            </p>
+          </article>
+
+          <article class="flow-card wide">
+            <span>04</span>
+            <h3>Versão personalizada para transportadoras</h3>
+            <p>
+              Para transportadoras interessadas em adquirir a ferramenta, é possível eliminar a necessidade
+              do cliente final digitar o token em cada consulta, mantendo segurança por cliente e oferecendo
+              uma experiência mais simples.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section mock-section">
+        <div class="section-kicker">Representação da ferramenta</div>
+
+        <div class="mock-panel">
+          <div class="mock-header">
+            <div>
+              <span>ESL.TRACKING</span>
+              <strong>Consulta de rastreio</strong>
+            </div>
+
+            <p>token protegido</p>
+          </div>
+
+          <div class="mock-content">
+            <div class="mock-form">
+              <div>
+                <small>Token do cliente</small>
+                <strong>••••••••••••••</strong>
+              </div>
+
+              <div>
+                <small>Documento / pedido</small>
+                <strong>000000</strong>
+              </div>
+
+              <button>Consultar</button>
+            </div>
+
+            <div class="mock-timeline">
+              <article class="done">
+                <span></span>
+                <div>
+                  <strong>Coleta realizada</strong>
+                  <p>Evento recebido do sistema da transportadora.</p>
+                </div>
+              </article>
+
+              <article class="done">
+                <span></span>
+                <div>
+                  <strong>Em trânsito</strong>
+                  <p>Mercadoria em deslocamento.</p>
+                </div>
+              </article>
+
+              <article class="active">
+                <span></span>
+                <div>
+                  <strong>Acompanhamento ativo</strong>
+                  <p>Atualização disponível para o cliente.</p>
+                </div>
+              </article>
+
+              <article>
+                <span></span>
+                <div>
+                  <strong>Entrega</strong>
+                  <p>Status final aguardando atualização.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="mock-side">
+              <article>
+                <small>Atendimento evitado</small>
+                <strong>WhatsApp</strong>
+                <p>Cliente consulta sozinho.</p>
+              </article>
+
+              <article>
+                <small>Base de origem</small>
+                <strong>ESL</strong>
+                <p>Dados vindos do sistema.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section security-section">
+        <div class="section-kicker">Segurança e evolução</div>
+
+        <div class="security-grid">
+          <article class="security-card">
+            <span>Modelo atual</span>
+            <h3>Consulta com token informado pelo cliente</h3>
+            <p>
+              Na versão atual, o cliente utiliza o token fornecido pela transportadora para realizar
+              a consulta de rastreio. Isso permite manter a ferramenta genérica e pronta para uso.
+            </p>
+          </article>
+
+          <article class="security-card highlight">
+            <span>Modelo personalizado</span>
+            <h3>Experiência sem digitar token a cada consulta</h3>
+            <p>
+              Para transportadoras interessadas, a solução pode ser personalizada para remover a etapa
+              de digitação manual do token pelo cliente final, mantendo a segurança por cliente.
+            </p>
+          </article>
+
+          <article class="security-card">
+            <span>Benefício</span>
+            <h3>Menos fricção para o cliente final</h3>
+            <p>
+              A transportadora pode oferecer um acesso mais simples, com uma experiência mais profissional
+              e menos dependente de atendimento humano para consultas básicas.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="before-after-section">
+        <div class="section-kicker">Antes e depois</div>
+
+        <div class="before-after-grid">
+          <article class="before-card">
+            <span>Antes da ferramenta</span>
+
+            <ul>
+              <li>Cliente chamava no WhatsApp para pedir rastreio.</li>
+              <li>Equipe precisava consultar manualmente o sistema.</li>
+              <li>Atendimento repetitivo consumia tempo operacional.</li>
+              <li>Cliente dependia da disponibilidade da transportadora.</li>
+              <li>Informações simples geravam interrupções constantes.</li>
+            </ul>
+          </article>
+
+          <article class="after-card">
+            <span>Com a ferramenta</span>
+
+            <ul>
+              <li>Cliente consulta o rastreio sozinho.</li>
+              <li>Dados são buscados diretamente no sistema ESL.</li>
+              <li>Transportadora reduz chamadas repetitivas no WhatsApp.</li>
+              <li>Consulta online disponível com token individual.</li>
+              <li>Possibilidade de versão personalizada para clientes da transportadora.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section result-section" id="resultado">
+        <div class="section-kicker">Resultado</div>
+
+        <div class="result-card">
+          <div>
+            <h2>
+              A transportadora ganhou uma forma simples de reduzir atendimento repetitivo e dar autonomia ao cliente.
+            </h2>
+
+            <p>
+              A ferramenta resolve uma dor direta: evitar que o cliente precise chamar alguém no WhatsApp
+              apenas para saber o status da sua mercadoria.
+            </p>
+
+            <p>
+              Como a consulta é conectada ao sistema ESL, a transportadora consegue disponibilizar rastreio
+              de forma prática, mantendo uma lógica de acesso por token e abrindo espaço para uma versão
+              personalizada mais profissional.
+            </p>
+          </div>
+
+          <div class="result-list">
+            <article>
+              <span>Mais autonomia</span>
+              <p>Cliente final consulta sua própria carga online.</p>
+            </article>
+
+            <article>
+              <span>Menos WhatsApp</span>
+              <p>Redução de chamadas repetitivas para pedir rastreio.</p>
+            </article>
+
+            <article>
+              <span>Mais praticidade</span>
+              <p>Ferramenta pronta para transportadoras que usam ESL.</p>
+            </article>
+
+            <article>
+              <span>Mais potencial comercial</span>
+              <p>Possibilidade de versão personalizada para cada transportadora.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">Projeto parecido?</p>
+
+            <h2>
+              Sua transportadora ainda responde rastreio manualmente pelo WhatsApp?
+            </h2>
+
+            <p>
+              Uma ferramenta de consulta pode reduzir atendimentos repetitivos, melhorar a experiência
+              do cliente e deixar sua operação mais profissional.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              href="https://wa.me/554491842745"
+              class="btn btn-primary"
+            >
+              Conversar sobre rastreio
+            </a>
+
+            <a href="index.php" class="btn btn-ghost">
+              Voltar ao portfólio
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 · Mateus Morais</p>
+      <p>Rastreio, transportadoras e automações web</p>
+    </footer>
+  </div>
+
+  <script>
+    const cursorLight = document.querySelector(".cursor-light");
+
+    window.addEventListener("mousemove", (event) => {
+      cursorLight.style.left = `${event.clientX}px`;
+      cursorLight.style.top = `${event.clientY}px`;
+    });
+
+    const animatedElements = document.querySelectorAll(
+      ".case-hero-copy, .hero-tracking, .floating-card, .position-section, .impact-strip article, .text-grid, .solution-layout, .flow-intro, .flow-card, .mock-panel, .security-card, .before-after-grid, .result-card, .contact-card"
+    );
+
+    animatedElements.forEach((element) => {
+      element.classList.add("reveal");
+    });
+
+    let lastScrollY = window.scrollY;
+
+    function updateScrollDirection() {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        document.body.classList.add("scroll-down");
+        document.body.classList.remove("scroll-up");
+      } else {
+        document.body.classList.add("scroll-up");
+        document.body.classList.remove("scroll-down");
+      }
+
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener("scroll", updateScrollDirection, { passive: true });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
+
+    animatedElements.forEach((element) => observer.observe(element));
+
+    window.addEventListener("load", () => {
+      document.body.classList.add("scroll-down");
+    });
+  </script>
+</body>
+</html>

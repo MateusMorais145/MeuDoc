@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Case | Calculadora Automática de Frete</title>
+
+  <meta
+    name="description"
+    content="Case de calculadora automática de frete integrada ao sistema do cliente, comparando transportadoras, custos adicionais e recomendando a opção mais econômica."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="calculadora-frete.css" />
+</head>
+
+<body>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <div class="page-bg" aria-hidden="true">
+    <div class="noise"></div>
+    <div class="grid-bg"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+  </div>
+
+  <aside class="side-rail" aria-label="Identidade lateral">
+    <a href="index.php" class="rail-logo">FLETO</a>
+    <span></span>
+    <p>Calculadora frete</p>
+  </aside>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="index.php" class="brand" aria-label="Voltar para página inicial">
+        <span>Mateus</span>
+        <strong>Morais</strong>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.php">Início</a></li>
+          <li><a href="#desafio">Desafio</a></li>
+          <li><a href="#solucao">Solução</a></li>
+          <li><a href="#funcionamento">Funcionamento</a></li>
+          <li><a href="#resultado">Resultado</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">Frete · Cotação · Automação logística</p>
+
+          <h1>
+            Cotação automática de frete sem depender de WhatsApp.
+          </h1>
+
+          <p class="hero-description">
+            Ferramenta desenvolvida para buscar automaticamente os dados das notas fiscais,
+            calcular o frete com todas as transportadoras habilitadas para a praça e entregar
+            um relatório completo com valores, custos adicionais e recomendação da melhor opção.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#funcionamento" class="btn btn-primary">Ver funcionamento</a>
+            <a href="#resultado" class="btn btn-ghost">Ver impacto</a>
+          </div>
+
+          <div class="hero-points">
+            <div>
+              <strong>NF</strong>
+              <span>dados coletados do sistema</span>
+            </div>
+
+            <div>
+              <strong>Frete</strong>
+              <span>cálculo por transportadora</span>
+            </div>
+
+            <div>
+              <strong>Decisão</strong>
+              <span>menor valor recomendado</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-calculator" aria-label="Representação visual da calculadora de frete">
+          <div class="calculator-frame">
+            <div class="calculator-top">
+              <span></span>
+              <p>freight.calculator</p>
+            </div>
+
+            <div class="calculator-body">
+              <div class="calculator-title">
+                <small>Relatório de cotação</small>
+                <strong>Melhor frete encontrado</strong>
+              </div>
+
+              <div class="quote-card recommended">
+                <div>
+                  <span>Transportadora A</span>
+                  <strong>R$ --,--</strong>
+                </div>
+                <p>Recomendada pelo menor custo parametrizado</p>
+              </div>
+
+              <div class="quote-list">
+                <article>
+                  <span>Transportadora B</span>
+                  <strong>R$ --,--</strong>
+                </article>
+
+                <article>
+                  <span>Transportadora C</span>
+                  <strong>R$ --,--</strong>
+                </article>
+
+                <article>
+                  <span>Transportadora D</span>
+                  <strong>R$ --,--</strong>
+                </article>
+              </div>
+
+              <div class="calculator-status">
+                <span></span>
+                <p>Frete + custos adicionais considerados</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-one">
+            <span>Entrada</span>
+            <strong>notas fiscais do sistema</strong>
+          </div>
+
+          <div class="floating-card floating-card-two">
+            <span>Saída</span>
+            <strong>relatório para fechamento</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="position-section">
+        <p>
+          Para empresas que ainda cotam frete manualmente com transportadoras pelo WhatsApp
+          e precisam transformar esse processo em uma decisão rápida, padronizada e confiável.
+        </p>
+
+        <div>
+          <span>Cotação</span>
+          <span>Frete</span>
+          <span>Transportadoras</span>
+          <span>Nota fiscal</span>
+          <span>Relatório</span>
+        </div>
+      </section>
+
+      <section class="impact-strip">
+        <article>
+          <span>01</span>
+          <strong>Sem cotação manual</strong>
+          <p>
+            O responsável deixa de enviar nota por nota no WhatsApp para consultar valores
+            com cada transportadora.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <strong>Cálculo completo</strong>
+          <p>
+            A ferramenta considera frete, transportadoras que atendem a praça e custos adicionais
+            conforme parametrização.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <strong>Recomendação objetiva</strong>
+          <p>
+            O relatório retorna todos os valores e destaca a opção de menor custo conforme regra
+            definida pelo cliente.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="desafio">
+        <div class="section-kicker">O desafio</div>
+
+        <div class="text-grid">
+          <h2>
+            Cada nota fiscal exigia uma nova rodada de cotação manual com transportadoras.
+          </h2>
+
+          <div class="rich-text">
+            <p>
+              O cliente tinha uma rotina operacional pesada: para cada nota fiscal, era necessário
+              consultar transportadoras manualmente pelo WhatsApp, aguardar retorno de valores,
+              comparar opções e decidir qual frete usar para fechar a carga.
+            </p>
+
+            <p>
+              Além do tempo gasto, esse processo abria espaço para divergências, esquecimentos,
+              decisões sem padronização e dificuldade para considerar todos os custos envolvidos
+              na contratação do frete.
+            </p>
+
+            <p>
+              O objetivo foi transformar essa rotina em uma ferramenta automatizada, capaz de buscar
+              os dados das notas, calcular os fretes disponíveis e entregar uma recomendação clara
+              para o responsável pelo fechamento das cargas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section solution-section" id="solucao">
+        <div class="section-kicker">A solução</div>
+
+        <div class="solution-layout">
+          <div>
+            <h2>
+              Uma calculadora conectada ao sistema, parametrizada com as regras do cliente.
+            </h2>
+
+            <p>
+              A ferramenta foi conectada ao sistema do cliente para coletar automaticamente
+              os dados das notas fiscais, sem necessidade de digitação manual ou envio individual
+              para cada transportadora.
+            </p>
+
+            <p>
+              A partir desses dados, o sistema calcula o frete com todas as transportadoras
+              cadastradas que atendem a praça, considera custos adicionais quando aplicável
+              e monta um relatório com a comparação completa.
+            </p>
+
+            <p>
+              Como regra definida pelo cliente, o sistema também destaca a recomendação do frete
+              com menor valor, facilitando a decisão do responsável pelo fechamento das cargas.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span>Dados e regras consideradas</span>
+
+            <ol>
+              <li>Dados das notas fiscais coletados automaticamente.</li>
+              <li>Praça atendida por cada transportadora.</li>
+              <li>Tabela de frete parametrizada.</li>
+              <li>Custos adicionais quando existentes.</li>
+              <li>Comparativo entre transportadoras disponíveis.</li>
+              <li>Recomendação da opção mais econômica.</li>
+              <li>Relatório completo para fechamento da carga.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section flow-section" id="funcionamento">
+        <div class="section-kicker">Funcionamento</div>
+
+        <div class="flow-intro">
+          <h2>
+            A ferramenta sai da nota fiscal e chega no relatório de decisão.
+          </h2>
+
+          <p>
+            O fluxo foi desenhado para reduzir o esforço operacional e transformar a cotação
+            em um processo padronizado, auditável e mais rápido para quem fecha as cargas.
+          </p>
+        </div>
+
+        <div class="flow-grid">
+          <article class="flow-card large">
+            <span>01</span>
+            <h3>Busca automática das notas</h3>
+            <p>
+              A ferramenta coleta diretamente no sistema os dados das notas fiscais que precisam
+              ter o frete calculado, evitando digitação e consulta manual.
+            </p>
+          </article>
+
+          <article class="flow-card">
+            <span>02</span>
+            <h3>Validação da praça</h3>
+            <p>
+              O sistema verifica quais transportadoras do cliente atendem a praça relacionada
+              à nota fiscal.
+            </p>
+          </article>
+
+          <article class="flow-card">
+            <span>03</span>
+            <h3>Cálculo do frete</h3>
+            <p>
+              Cada transportadora elegível tem seu frete calculado com base nas regras e tabelas
+              parametrizadas.
+            </p>
+          </article>
+
+          <article class="flow-card">
+            <span>04</span>
+            <h3>Custos adicionais</h3>
+            <p>
+              Quando existem custos extras previstos na operação, eles são considerados no valor
+              final do frete.
+            </p>
+          </article>
+
+          <article class="flow-card wide">
+            <span>05</span>
+            <h3>Relatório com recomendação</h3>
+            <p>
+              O responsável recebe a informação completa das notas, todos os valores de frete
+              e a recomendação da opção mais barata conforme parametrização do cliente.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section mock-section">
+        <div class="section-kicker">Representação da ferramenta</div>
+
+        <div class="mock-panel">
+          <div class="mock-header">
+            <div>
+              <span>FREIGHT.CALC</span>
+              <strong>Comparativo automático de frete</strong>
+            </div>
+
+            <p>dados protegidos</p>
+          </div>
+
+          <div class="mock-content">
+            <div class="mock-source">
+              <small>Origem dos dados</small>
+              <strong>Notas fiscais do sistema</strong>
+              <p>Coleta automática dos dados necessários para cálculo.</p>
+            </div>
+
+            <div class="mock-table">
+              <div class="table-head">
+                <span>Transportadora</span>
+                <span>Frete</span>
+                <span>Adicionais</span>
+                <span>Total</span>
+              </div>
+
+              <div class="table-row recommended-row">
+                <span>Transportadora A</span>
+                <strong>R$ --</strong>
+                <strong>R$ --</strong>
+                <strong>Menor valor</strong>
+              </div>
+
+              <div class="table-row">
+                <span>Transportadora B</span>
+                <strong>R$ --</strong>
+                <strong>R$ --</strong>
+                <strong>R$ --</strong>
+              </div>
+
+              <div class="table-row">
+                <span>Transportadora C</span>
+                <strong>R$ --</strong>
+                <strong>R$ --</strong>
+                <strong>R$ --</strong>
+              </div>
+
+              <div class="table-row">
+                <span>Transportadora D</span>
+                <strong>R$ --</strong>
+                <strong>R$ --</strong>
+                <strong>R$ --</strong>
+              </div>
+            </div>
+
+            <div class="mock-recommendation">
+              <small>Recomendação</small>
+              <strong>Escolher menor custo</strong>
+              <p>
+                A recomendação segue a regra definida pelo cliente para apoiar o fechamento da carga.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section rule-section">
+        <div class="section-kicker">Parametrização</div>
+
+        <div class="rule-grid">
+          <article class="rule-card">
+            <span>Transportadoras</span>
+            <h3>Somente quem atende a praça</h3>
+            <p>
+              O sistema considera apenas as transportadoras cadastradas que realmente atendem
+              a região da nota fiscal.
+            </p>
+          </article>
+
+          <article class="rule-card highlight">
+            <span>Custos finais</span>
+            <h3>Frete + adicionais</h3>
+            <p>
+              O cálculo não considera apenas o frete base. Quando existem custos adicionais
+              parametrizados, eles entram no valor final.
+            </p>
+          </article>
+
+          <article class="rule-card">
+            <span>Decisão</span>
+            <h3>Recomendação por menor valor</h3>
+            <p>
+              A ferramenta destaca a opção mais barata, conforme a regra definida pelo cliente
+              para apoiar o fechamento das cargas.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="before-after-section">
+        <div class="section-kicker">Antes e depois</div>
+
+        <div class="before-after-grid">
+          <article class="before-card">
+            <span>Antes da calculadora</span>
+
+            <ul>
+              <li>Cotação nota por nota pelo WhatsApp.</li>
+              <li>Dependência do retorno manual das transportadoras.</li>
+              <li>Comparação feita manualmente pelo responsável.</li>
+              <li>Risco de esquecer custos adicionais.</li>
+              <li>Mais tempo para fechar cargas e decidir frete.</li>
+            </ul>
+          </article>
+
+          <article class="after-card">
+            <span>Com a calculadora</span>
+
+            <ul>
+              <li>Busca automática dos dados das notas fiscais.</li>
+              <li>Cálculo com transportadoras que atendem a praça.</li>
+              <li>Frete e custos adicionais considerados.</li>
+              <li>Relatório completo para fechamento das cargas.</li>
+              <li>Recomendação automática da opção mais econômica.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section result-section" id="resultado">
+        <div class="section-kicker">Resultado</div>
+
+        <div class="result-card">
+          <div>
+            <h2>
+              A cotação deixou de ser uma conversa manual e virou um relatório de decisão.
+            </h2>
+
+            <p>
+              A ferramenta reduziu a dependência de WhatsApp para cotação de fretes e entregou
+              ao responsável pelo fechamento das cargas uma visão completa, padronizada e mais rápida.
+            </p>
+
+            <p>
+              Com todos os valores calculados e a recomendação da transportadora mais econômica,
+              o cliente passou a tomar decisões com mais agilidade e menos retrabalho operacional.
+            </p>
+          </div>
+
+          <div class="result-list">
+            <article>
+              <span>Mais velocidade</span>
+              <p>Menos tempo cotando manualmente com transportadoras.</p>
+            </article>
+
+            <article>
+              <span>Mais precisão</span>
+              <p>Fretes calculados com regras parametrizadas e custos adicionais.</p>
+            </article>
+
+            <article>
+              <span>Mais controle</span>
+              <p>Relatório completo com informações das notas e valores calculados.</p>
+            </article>
+
+            <article>
+              <span>Mais economia</span>
+              <p>Recomendação da opção de menor custo conforme regra do cliente.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">Projeto parecido?</p>
+
+            <h2>
+              Sua empresa ainda cota frete manualmente pelo WhatsApp?
+            </h2>
+
+            <p>
+              Uma calculadora de frete sob medida pode buscar notas, comparar transportadoras,
+              considerar custos adicionais e entregar a melhor opção para fechamento da carga.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              href="https://wa.me/554491842745"
+              class="btn btn-primary"
+            >
+              Conversar sobre calculadora de frete
+            </a>
+
+            <a href="index.php" class="btn btn-ghost">
+              Voltar ao portfólio
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 · Mateus Morais</p>
+      <p>Frete, logística e automações web</p>
+    </footer>
+  </div>
+
+  <script>
+    const cursorLight = document.querySelector(".cursor-light");
+
+    window.addEventListener("mousemove", (event) => {
+      cursorLight.style.left = `${event.clientX}px`;
+      cursorLight.style.top = `${event.clientY}px`;
+    });
+
+    const animatedElements = document.querySelectorAll(
+      ".case-hero-copy, .hero-calculator, .floating-card, .position-section, .impact-strip article, .text-grid, .solution-layout, .flow-intro, .flow-card, .mock-panel, .rule-card, .before-after-grid, .result-card, .contact-card"
+    );
+
+    animatedElements.forEach((element) => {
+      element.classList.add("reveal");
+    });
+
+    let lastScrollY = window.scrollY;
+
+    function updateScrollDirection() {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        document.body.classList.add("scroll-down");
+        document.body.classList.remove("scroll-up");
+      } else {
+        document.body.classList.add("scroll-up");
+        document.body.classList.remove("scroll-down");
+      }
+
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener("scroll", updateScrollDirection, { passive: true });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
+
+    animatedElements.forEach((element) => observer.observe(element));
+
+    window.addEventListener("load", () => {
+      document.body.classList.add("scroll-down");
+    });
+  </script>
+</body>
+</html>

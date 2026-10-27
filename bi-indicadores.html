@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Case | BI e Indicadores</title>
+
+  <meta
+    name="description"
+    content="Case de BI e indicadores desenvolvido por Mateus Morais. Dashboard gerencial para centralização de dados, acompanhamento de indicadores e apoio à tomada de decisão."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="bi-indicadores.css" />
+</head>
+
+<body>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <div class="page-bg" aria-hidden="true">
+    <div class="noise"></div>
+    <div class="grid-bg"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+  </div>
+
+  <aside class="side-rail" aria-label="Identidade lateral">
+    <a href="index.php" class="rail-logo">FLETO</a>
+    <span></span>
+    <p>BI e indicadores</p>
+  </aside>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="index.php" class="brand" aria-label="Voltar para página inicial">
+        <span>Mateus</span>
+        <strong>Morais</strong>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.php">Início</a></li>
+          <li><a href="#desafio">Desafio</a></li>
+          <li><a href="#solucao">Solução</a></li>
+          <li><a href="#estrutura">Estrutura</a></li>
+          <li><a href="#resultado">Resultado</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">BI · Indicadores · Decisão gerencial</p>
+
+          <h1>
+            Dashboard gerencial para transformar dados em decisão.
+          </h1>
+
+          <p class="hero-description">
+            Painel desenvolvido para centralizar informações, acompanhar indicadores
+            relevantes e facilitar decisões com base em dados organizados, confiáveis
+            e acessíveis para a gestão.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#estrutura" class="btn btn-primary">Ver estrutura do painel</a>
+            <a href="#resultado" class="btn btn-ghost">Ver impacto</a>
+          </div>
+        </div>
+
+        <div class="hero-dashboard" aria-label="Representação visual de dashboard gerencial">
+          <div class="dashboard-top">
+            <span></span>
+            <p>dashboard.preview</p>
+          </div>
+
+          <div class="dashboard-body">
+            <div class="kpi-row">
+              <article>
+                <small>Receita</small>
+                <strong>R$ --,--</strong>
+                <span>indicador protegido</span>
+              </article>
+
+              <article>
+                <small>Performance</small>
+                <strong>--%</strong>
+                <span>dado confidencial</span>
+              </article>
+            </div>
+
+            <div class="fake-chart">
+              <div style="height: 42%"></div>
+              <div style="height: 68%"></div>
+              <div style="height: 54%"></div>
+              <div style="height: 82%"></div>
+              <div style="height: 61%"></div>
+              <div style="height: 75%"></div>
+              <div style="height: 91%"></div>
+            </div>
+
+            <div class="dashboard-list">
+              <div>
+                <span></span>
+                <p>Indicador operacional</p>
+              </div>
+
+              <div>
+                <span></span>
+                <p>Comparativo por período</p>
+              </div>
+
+              <div>
+                <span></span>
+                <p>Visão gerencial consolidada</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="position-section">
+        <p>
+          Para empresas que possuem dados espalhados em planilhas, sistemas e controles paralelos,
+          mas ainda têm dificuldade para transformar essas informações em visão gerencial.
+        </p>
+
+        <div>
+          <span>Power BI</span>
+          <span>Indicadores</span>
+          <span>Gestão</span>
+          <span>Performance</span>
+          <span>Dados</span>
+        </div>
+      </section>
+
+      <section class="impact-strip">
+        <article>
+          <span>01</span>
+          <strong>Dados centralizados</strong>
+          <p>
+            Informações de diferentes fontes organizadas em uma visão única para consulta e análise.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <strong>Indicadores claros</strong>
+          <p>
+            KPIs estruturados para acompanhar desempenho, evolução, gargalos e oportunidades.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <strong>Decisão mais rápida</strong>
+          <p>
+            Menos tempo procurando dados e mais velocidade para agir com base em informação confiável.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="desafio">
+        <div class="section-kicker">O desafio</div>
+
+        <div class="text-grid">
+          <h2>
+            Dados existiam, mas estavam espalhados, difíceis de acompanhar e pouco úteis para decisão.
+          </h2>
+
+          <div class="rich-text">
+            <p>
+              Antes da estruturação do dashboard, parte das informações era acompanhada por meio
+              de planilhas, relatórios isolados, consultas manuais e controles internos sem uma
+              visão consolidada.
+            </p>
+
+            <p>
+              Isso dificultava a análise do desempenho, atrasava a identificação de problemas
+              e fazia com que decisões importantes dependessem de levantamentos manuais ou
+              informações fragmentadas.
+            </p>
+
+            <p>
+              O desafio era transformar dados operacionais em uma leitura clara, visual e confiável,
+              protegendo informações sensíveis do cliente e mantendo foco nos indicadores que realmente
+              ajudam a gestão.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section solution-section" id="solucao">
+        <div class="section-kicker">A solução</div>
+
+        <div class="solution-layout">
+          <div>
+            <h2>
+              Um painel gerencial construído para dar clareza ao que antes estava disperso.
+            </h2>
+
+            <p>
+              O dashboard foi desenvolvido para centralizar dados importantes, organizar indicadores
+              e permitir que a equipe acompanhe informações estratégicas de maneira mais rápida,
+              limpa e objetiva.
+            </p>
+
+            <p>
+              A proposta não foi apenas criar gráficos, mas construir uma ferramenta de apoio à gestão:
+              com filtros, visões comparativas, indicadores principais e leitura facilitada para diferentes
+              níveis de análise.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span>Fluxo de construção</span>
+
+            <ol>
+              <li>Entendimento da necessidade gerencial.</li>
+              <li>Mapeamento das fontes de dados disponíveis.</li>
+              <li>Tratamento, limpeza e padronização das informações.</li>
+              <li>Criação dos indicadores principais.</li>
+              <li>Desenvolvimento do painel visual.</li>
+              <li>Validação com a operação e ajustes finais.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section structure-section" id="estrutura">
+        <div class="section-kicker">Estrutura do painel</div>
+
+        <div class="structure-intro">
+          <h2>
+            Sem expor dados reais, a estrutura mostra como o dashboard organiza a visão de gestão.
+          </h2>
+
+          <p>
+            Por confidencialidade, os dados e imagens reais do cliente não são exibidos. A representação
+            abaixo mostra a lógica da solução: indicadores principais, filtros, gráficos de tendência,
+            comparativos e alertas para tomada de decisão.
+          </p>
+        </div>
+
+        <div class="dashboard-map">
+          <article class="map-card highlight">
+            <span>01</span>
+            <h3>Indicadores principais</h3>
+            <p>
+              KPIs resumidos para leitura rápida da operação, permitindo identificar o cenário atual
+              logo no primeiro contato com o painel.
+            </p>
+          </article>
+
+          <article class="map-card">
+            <span>02</span>
+            <h3>Filtros inteligentes</h3>
+            <p>
+              Recortes por período, unidade, cliente, categoria, responsável ou demais dimensões
+              relevantes para a análise.
+            </p>
+          </article>
+
+          <article class="map-card">
+            <span>03</span>
+            <h3>Comparativos</h3>
+            <p>
+              Visões entre períodos, metas, evolução histórica e variações relevantes para a gestão.
+            </p>
+          </article>
+
+          <article class="map-card">
+            <span>04</span>
+            <h3>Alertas e pontos de atenção</h3>
+            <p>
+              Destaques visuais para indicadores fora do esperado, gargalos, atrasos ou desvios.
+            </p>
+          </article>
+
+          <article class="map-card wide">
+            <span>05</span>
+            <h3>Leitura executiva</h3>
+            <p>
+              Organização visual pensada para que gestores encontrem rapidamente o que precisa
+              de acompanhamento, decisão ou ação corretiva.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section mock-section">
+        <div class="section-kicker">Visual conceitual</div>
+
+        <div class="mock-panel">
+          <div class="mock-header">
+            <div>
+              <span>BI.GERENCIAL</span>
+              <strong>Visão executiva protegida</strong>
+            </div>
+
+            <p>Dados reais ocultados</p>
+          </div>
+
+          <div class="mock-content">
+            <div class="mock-sidebar">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="mock-main">
+              <div class="mock-kpis">
+                <article>
+                  <small>Indicador A</small>
+                  <strong>--%</strong>
+                </article>
+
+                <article>
+                  <small>Indicador B</small>
+                  <strong>R$ --</strong>
+                </article>
+
+                <article>
+                  <small>Indicador C</small>
+                  <strong>---</strong>
+                </article>
+              </div>
+
+              <div class="mock-grid">
+                <div class="mock-chart bars">
+                  <span style="height: 44%"></span>
+                  <span style="height: 72%"></span>
+                  <span style="height: 58%"></span>
+                  <span style="height: 84%"></span>
+                  <span style="height: 66%"></span>
+                  <span style="height: 91%"></span>
+                </div>
+
+                <div class="mock-chart line">
+                  <svg viewBox="0 0 300 160" preserveAspectRatio="none">
+                    <polyline
+                      points="0,120 50,90 100,105 150,55 200,70 250,35 300,48"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="5"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="mock-table">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="before-after-section">
+        <div class="section-kicker">Antes e depois</div>
+
+        <div class="before-after-grid">
+          <article class="before-card">
+            <span>Antes do dashboard</span>
+
+            <ul>
+              <li>Informações espalhadas em planilhas e relatórios separados.</li>
+              <li>Tempo gasto consolidando dados manualmente.</li>
+              <li>Dificuldade para acompanhar indicadores atualizados.</li>
+              <li>Baixa visibilidade sobre gargalos e evolução.</li>
+              <li>Decisões dependentes de levantamentos pontuais.</li>
+            </ul>
+          </article>
+
+          <article class="after-card">
+            <span>Com o dashboard</span>
+
+            <ul>
+              <li>Indicadores centralizados em uma visão gerencial.</li>
+              <li>Dados tratados, organizados e prontos para análise.</li>
+              <li>Leitura mais rápida da operação e dos resultados.</li>
+              <li>Facilidade para identificar desvios e oportunidades.</li>
+              <li>Apoio visual para decisões mais seguras e consistentes.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section result-section" id="resultado">
+        <div class="section-kicker">Resultado</div>
+
+        <div class="result-card">
+          <div>
+            <h2>
+              A gestão passou a ter uma visão mais clara, rápida e confiável dos indicadores.
+            </h2>
+
+            <p>
+              O dashboard reduziu a dependência de controles manuais e facilitou o acompanhamento
+              dos dados mais importantes para a tomada de decisão.
+            </p>
+
+            <p>
+              Com as informações centralizadas, a equipe consegue analisar cenários, identificar
+              pontos de atenção e agir com mais segurança, sem precisar buscar dados em diferentes fontes.
+            </p>
+          </div>
+
+          <div class="result-list">
+            <article>
+              <span>Mais clareza</span>
+              <p>Indicadores organizados para leitura gerencial.</p>
+            </article>
+
+            <article>
+              <span>Menos retrabalho</span>
+              <p>Redução de consultas manuais e consolidações repetitivas.</p>
+            </article>
+
+            <article>
+              <span>Mais velocidade</span>
+              <p>Análise mais rápida para decisões operacionais e estratégicas.</p>
+            </article>
+
+            <article>
+              <span>Mais confiabilidade</span>
+              <p>Dados tratados e padronizados para evitar interpretações desalinhadas.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">Projeto parecido?</p>
+
+            <h2>
+              Sua empresa tem dados, mas ainda não tem uma visão clara para decidir?
+            </h2>
+
+            <p>
+              Um dashboard gerencial pode transformar planilhas, sistemas e controles internos
+              em uma visão mais simples, visual e estratégica.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              href="https://wa.me/554491842745"
+              class="btn btn-primary"
+            >
+              Conversar sobre BI
+            </a>
+
+            <a href="index.php" class="btn btn-ghost">
+              Voltar ao portfólio
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 · Mateus Morais</p>
+      <p>BI, indicadores e automações</p>
+    </footer>
+  </div>
+
+  <script>
+    const cursorLight = document.querySelector(".cursor-light");
+
+    window.addEventListener("mousemove", (event) => {
+      cursorLight.style.left = `${event.clientX}px`;
+      cursorLight.style.top = `${event.clientY}px`;
+    });
+
+    const animatedElements = document.querySelectorAll(
+      ".case-hero-copy, .hero-dashboard, .position-section, .impact-strip article, .text-grid, .solution-layout, .structure-intro, .map-card, .mock-panel, .before-after-grid, .result-card, .contact-card"
+    );
+
+    animatedElements.forEach((element) => {
+      element.classList.add("reveal");
+    });
+
+    let lastScrollY = window.scrollY;
+
+    function updateScrollDirection() {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        document.body.classList.add("scroll-down");
+        document.body.classList.remove("scroll-up");
+      } else {
+        document.body.classList.add("scroll-up");
+        document.body.classList.remove("scroll-down");
+      }
+
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener("scroll", updateScrollDirection, { passive: true });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
+
+    animatedElements.forEach((element) => observer.observe(element));
+
+    window.addEventListener("load", () => {
+      document.body.classList.add("scroll-down");
+    });
+  </script>
+</body>
+</html>

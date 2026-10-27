@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Case | Sistema de Minutas e Despacho</title>
+
+  <meta
+    name="description"
+    content="Case de sistema web para criação, controle, impressão e rastreio de minutas de despacho, com dados fiscais, motorista, veículo e conferentes."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="minutas.css" />
+</head>
+
+<body>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <div class="page-bg" aria-hidden="true">
+    <div class="noise"></div>
+    <div class="grid-bg"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+  </div>
+
+  <aside class="side-rail" aria-label="Identidade lateral">
+    <a href="index.php" class="rail-logo">FLETO</a>
+    <span></span>
+    <p>Minutas e despacho</p>
+  </aside>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="index.php" class="brand" aria-label="Voltar para página inicial">
+        <span>Mateus</span>
+        <strong>Morais</strong>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.php">Início</a></li>
+          <li><a href="#desafio">Desafio</a></li>
+          <li><a href="#solucao">Solução</a></li>
+          <li><a href="#fluxo">Fluxo</a></li>
+          <li><a href="#resultado">Resultado</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">Sistema web · Minutas · Expedição</p>
+
+          <h1>
+            Da nota fiscal ao despacho, tudo registrado e rastreável.
+          </h1>
+
+          <p class="hero-description">
+            Sistema web desenvolvido para criar, controlar, imprimir e consultar minutas
+            de despacho a partir da nota fiscal, centralizando informações da carga,
+            motorista, veículo, conferentes e histórico completo da expedição.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#fluxo" class="btn btn-primary">Ver fluxo do sistema</a>
+            <a href="#resultado" class="btn btn-ghost">Ver impacto</a>
+          </div>
+
+          <div class="access-row">
+            <div>
+              <strong>Nota fiscal</strong>
+              <span>busca automática dos dados</span>
+            </div>
+
+            <div>
+              <strong>Minuta</strong>
+              <span>documento pronto para despacho</span>
+            </div>
+
+            <div>
+              <strong>Histórico</strong>
+              <span>consulta e reimpressão</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-document" aria-label="Representação visual do sistema de minutas">
+          <div class="document-frame">
+            <div class="document-header">
+              <span></span>
+              <p>minuta.dispatch</p>
+            </div>
+
+            <div class="document-body">
+              <div class="document-title">
+                <small>Documento de despacho</small>
+                <strong>MINUTA #----</strong>
+              </div>
+
+              <div class="document-grid">
+                <article>
+                  <span>NF</span>
+                  <strong>000000</strong>
+                </article>
+
+                <article>
+                  <span>Volumes</span>
+                  <strong>--</strong>
+                </article>
+
+                <article>
+                  <span>Peso</span>
+                  <strong>-- kg</strong>
+                </article>
+
+                <article>
+                  <span>Cubagem</span>
+                  <strong>-- m³</strong>
+                </article>
+              </div>
+
+              <div class="document-line">
+                <span>Cliente</span>
+                <strong>Nome protegido</strong>
+              </div>
+
+              <div class="document-line">
+                <span>Transportadora</span>
+                <strong>Transportadora selecionada</strong>
+              </div>
+
+              <div class="document-route">
+                <div>
+                  <span>Motorista</span>
+                  <strong>registrado</strong>
+                </div>
+
+                <div>
+                  <span>Veículo</span>
+                  <strong>placa vinculada</strong>
+                </div>
+              </div>
+
+              <div class="document-status">
+                <span></span>
+                <p>Minuta pronta para impressão e rastreio</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-one">
+            <span>Entrada</span>
+            <strong>Transportadora + NF</strong>
+          </div>
+
+          <div class="floating-card floating-card-two">
+            <span>Saída</span>
+            <strong>Documento de despacho</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="position-section">
+        <p>
+          Para operações que precisam controlar expedições, documentos de despacho,
+          motoristas, veículos e conferentes sem depender de papel, planilhas ou memória operacional.
+        </p>
+
+        <div>
+          <span>Minutas</span>
+          <span>Expedição</span>
+          <span>Rastreio</span>
+          <span>Nota fiscal</span>
+          <span>Histórico</span>
+        </div>
+      </section>
+
+      <section class="impact-strip">
+        <article>
+          <span>01</span>
+          <strong>Busca automática da nota</strong>
+          <p>
+            O usuário informa transportadora e nota fiscal, e o sistema busca os dados necessários
+            para montar a minuta.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <strong>Despacho documentado</strong>
+          <p>
+            Motorista, placa, contato e conferentes ficam vinculados à minuta e à mercadoria expedida.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <strong>Histórico rastreável</strong>
+          <p>
+            Supervisores, gerentes e conferentes conseguem consultar quando a carga saiu,
+            com quem e para quem.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="desafio">
+        <div class="section-kicker">O desafio</div>
+
+        <div class="text-grid">
+          <h2>
+            A expedição precisava de controle, rastreabilidade e documentos acessíveis a qualquer momento.
+          </h2>
+
+          <div class="rich-text">
+            <p>
+              O processo de criação de minutas exigia reunir informações da nota fiscal,
+              dados da transportadora, dados da carga, motorista, veículo e responsáveis pela expedição.
+              Sem um sistema centralizado, parte dessas informações poderia ficar espalhada ou depender
+              de controles manuais.
+            </p>
+
+            <p>
+              Isso dificultava o rastreio posterior da carga: saber quando saiu, com qual motorista,
+              em qual veículo, quem conferiu, para qual cliente foi enviada e qual documento foi utilizado
+              no despacho.
+            </p>
+
+            <p>
+              Também havia a necessidade de imprimir ou reimprimir a minuta em qualquer momento,
+              mantendo um histórico confiável para supervisores, gerentes e conferentes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section solution-section" id="solucao">
+        <div class="section-kicker">A solução</div>
+
+        <div class="solution-layout">
+          <div>
+            <h2>
+              Um sistema web para gerar a minuta e guardar o histórico completo da expedição.
+            </h2>
+
+            <p>
+              O sistema foi desenvolvido para que o usuário informe apenas a transportadora
+              e o número da nota fiscal. A partir disso, a aplicação busca automaticamente
+              os dados da nota e monta o documento de despacho.
+            </p>
+
+            <p>
+              Além dos dados fiscais e logísticos, o sistema registra motorista, placa do veículo,
+              contato, conferentes responsáveis pela expedição e demais informações necessárias
+              para rastrear a carga posteriormente.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span>Dados capturados</span>
+
+            <ol>
+              <li>Volumes da mercadoria.</li>
+              <li>Peso em kg.</li>
+              <li>Cubagem em m³.</li>
+              <li>Valor da nota fiscal.</li>
+              <li>Nome do cliente.</li>
+              <li>Endereço e CEP.</li>
+              <li>CNPJ do destinatário.</li>
+              <li>Transportadora vinculada.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section flow-section" id="fluxo">
+        <div class="section-kicker">Fluxo operacional</div>
+
+        <div class="flow-intro">
+          <h2>
+            A minuta nasce da nota fiscal e vira um documento rastreável para toda a operação.
+          </h2>
+
+          <p>
+            O sistema foi pensado para simplificar a rotina da expedição, mantendo o controle
+            administrativo e operacional em um único ambiente protegido por login e senha.
+          </p>
+        </div>
+
+        <div class="flow-grid">
+          <article class="flow-card large">
+            <span>01</span>
+            <h3>Entrada da transportadora e nota fiscal</h3>
+            <p>
+              O usuário informa a transportadora responsável e o número da nota fiscal.
+              A partir dessa entrada, o sistema inicia a busca dos dados necessários para o despacho.
+            </p>
+          </article>
+
+          <article class="flow-card">
+            <span>02</span>
+            <h3>Busca dos dados fiscais</h3>
+            <p>
+              A aplicação consulta os dados da nota, como volumes, peso, cubagem, valor,
+              cliente, endereço, CEP e CNPJ.
+            </p>
+          </article>
+
+          <article class="flow-card">
+            <span>03</span>
+            <h3>Registro da expedição</h3>
+            <p>
+              São armazenados motorista, placa do veículo, contato e conferentes que expediram
+              a mercadoria.
+            </p>
+          </article>
+
+          <article class="flow-card wide">
+            <span>04</span>
+            <h3>Geração, impressão e histórico</h3>
+            <p>
+              A minuta é gerada para despacho e fica salva no histórico, podendo ser consultada,
+              impressa ou reimpressa a qualquer momento.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section visual-section">
+        <div class="section-kicker">Representação do sistema</div>
+
+        <div class="system-mock">
+          <div class="mock-top">
+            <div>
+              <span>MINUTAS.WEB</span>
+              <strong>Controle de despacho</strong>
+            </div>
+
+            <p>acesso administrativo</p>
+          </div>
+
+          <div class="mock-content">
+            <aside class="mock-sidebar">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </aside>
+
+            <div class="mock-main">
+              <div class="mock-form">
+                <div>
+                  <small>Transportadora</small>
+                  <strong>Selecionar transportadora</strong>
+                </div>
+
+                <div>
+                  <small>Nota fiscal</small>
+                  <strong>000000</strong>
+                </div>
+
+                <button>Buscar dados da nota</button>
+              </div>
+
+              <div class="mock-data-grid">
+                <article>
+                  <span>Volumes</span>
+                  <strong>--</strong>
+                </article>
+
+                <article>
+                  <span>Peso</span>
+                  <strong>-- kg</strong>
+                </article>
+
+                <article>
+                  <span>Cubagem</span>
+                  <strong>-- m³</strong>
+                </article>
+
+                <article>
+                  <span>Valor</span>
+                  <strong>R$ --</strong>
+                </article>
+              </div>
+
+              <div class="mock-dispatch">
+                <div>
+                  <span>Motorista</span>
+                  <p>Nome registrado no despacho</p>
+                </div>
+
+                <div>
+                  <span>Placa</span>
+                  <p>Veículo vinculado à carga</p>
+                </div>
+
+                <div>
+                  <span>Conferentes</span>
+                  <p>Responsáveis pela expedição</p>
+                </div>
+              </div>
+
+              <div class="mock-history">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section access-section">
+        <div class="section-kicker">Controle e rastreabilidade</div>
+
+        <div class="access-grid">
+          <article class="access-card">
+            <span>Supervisores</span>
+            <h3>Visão de acompanhamento</h3>
+            <p>
+              Podem consultar minutas emitidas, verificar expedições e acompanhar registros
+              relacionados às cargas.
+            </p>
+          </article>
+
+          <article class="access-card manager">
+            <span>Gerentes</span>
+            <h3>Histórico completo</h3>
+            <p>
+              Conseguem rastrear quando a carga saiu, com quem, para quem e quais conferentes
+              participaram da expedição.
+            </p>
+          </article>
+
+          <article class="access-card">
+            <span>Conferentes</span>
+            <h3>Registro operacional</h3>
+            <p>
+              Têm apoio para registrar e consultar documentos ligados à mercadoria expedida.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="before-after-section">
+        <div class="section-kicker">Antes e depois</div>
+
+        <div class="before-after-grid">
+          <article class="before-card">
+            <span>Antes do sistema</span>
+
+            <ul>
+              <li>Dados da nota consultados manualmente.</li>
+              <li>Minutas dependentes de controles separados.</li>
+              <li>Dificuldade para rastrear motorista, veículo e conferentes.</li>
+              <li>Reimpressão dependente de localizar arquivos ou registros antigos.</li>
+              <li>Menos visibilidade sobre o histórico da expedição.</li>
+            </ul>
+          </article>
+
+          <article class="after-card">
+            <span>Com o sistema</span>
+
+            <ul>
+              <li>Busca automática dos dados da nota fiscal.</li>
+              <li>Documento de despacho montado pelo sistema.</li>
+              <li>Motorista, placa, contato e conferentes registrados.</li>
+              <li>Histórico completo com impressão e reimpressão.</li>
+              <li>Rastreabilidade para supervisores, gerentes e operação.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section result-section" id="resultado">
+        <div class="section-kicker">Resultado</div>
+
+        <div class="result-card">
+          <div>
+            <h2>
+              A expedição ganhou controle, histórico e rastreabilidade sem depender de processos manuais.
+            </h2>
+
+            <p>
+              O sistema centralizou a criação das minutas e passou a registrar os dados essenciais
+              da carga, do cliente, da transportadora, do motorista, do veículo e dos conferentes.
+            </p>
+
+            <p>
+              Com o histórico completo, a operação consegue consultar, imprimir e reimprimir documentos
+              sempre que necessário, além de rastrear detalhes importantes sobre cada despacho.
+            </p>
+          </div>
+
+          <div class="result-list">
+            <article>
+              <span>Mais controle</span>
+              <p>Minutas criadas e armazenadas em ambiente web com login administrativo.</p>
+            </article>
+
+            <article>
+              <span>Mais rastreio</span>
+              <p>Registro de motorista, veículo, contato, conferentes e cliente.</p>
+            </article>
+
+            <article>
+              <span>Mais praticidade</span>
+              <p>Busca automática dos dados da nota e montagem do documento de despacho.</p>
+            </article>
+
+            <article>
+              <span>Mais segurança operacional</span>
+              <p>Histórico completo para consulta, impressão e reimpressão.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">Projeto parecido?</p>
+
+            <h2>
+              Sua operação ainda cria documentos de despacho de forma manual?
+            </h2>
+
+            <p>
+              Um sistema web sob medida pode automatizar a criação de minutas, registrar históricos
+              e dar rastreabilidade para expedição, supervisão e gestão.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              href="https://wa.me/554491842745"
+              class="btn btn-primary"
+            >
+              Conversar sobre sistema de minutas
+            </a>
+
+            <a href="index.php" class="btn btn-ghost">
+              Voltar ao portfólio
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 · Mateus Morais</p>
+      <p>Sistemas web, logística e automações</p>
+    </footer>
+  </div>
+
+  <script>
+    const cursorLight = document.querySelector(".cursor-light");
+
+    window.addEventListener("mousemove", (event) => {
+      cursorLight.style.left = `${event.clientX}px`;
+      cursorLight.style.top = `${event.clientY}px`;
+    });
+
+    const animatedElements = document.querySelectorAll(
+      ".case-hero-copy, .hero-document, .floating-card, .position-section, .impact-strip article, .text-grid, .solution-layout, .flow-intro, .flow-card, .system-mock, .access-card, .before-after-grid, .result-card, .contact-card"
+    );
+
+    animatedElements.forEach((element) => {
+      element.classList.add("reveal");
+    });
+
+    let lastScrollY = window.scrollY;
+
+    function updateScrollDirection() {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        document.body.classList.add("scroll-down");
+        document.body.classList.remove("scroll-up");
+      } else {
+        document.body.classList.add("scroll-up");
+        document.body.classList.remove("scroll-down");
+      }
+
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener("scroll", updateScrollDirection, { passive: true });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
+
+    animatedElements.forEach((element) => observer.observe(element));
+
+    window.addEventListener("load", () => {
+      document.body.classList.add("scroll-down");
+    });
+  </script>
+</body>
+</html>

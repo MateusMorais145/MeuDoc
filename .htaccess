@@ -1,0 +1,96 @@
+Options -MultiViews
+
+RewriteEngine On
+RewriteBase /Portifolio/
+
+DirectoryIndex index.php index.html
+
+# =========================================================
+# HOME
+# /Portifolio/index.php -> /Portifolio/
+# =========================================================
+
+RewriteCond %{THE_REQUEST} \s/+Portifolio/index\.php[\s?] [NC]
+RewriteRule ^index\.php$ /Portifolio/ [R=301,L]
+
+
+# =========================================================
+# REDIRECIONA ARQUIVOS ANTIGOS PARA NOMES FANTASIA
+# IMPORTANTE: redireciona apenas quando o usuario pediu o .html diretamente
+# =========================================================
+
+RewriteCond %{THE_REQUEST} \s/+Portifolio/baixa-comprovante\.html[\s?] [NC]
+RewriteRule ^baixa-comprovante\.html$ /Portifolio/automacao-comprovantes [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Portifolio/fleto\.html[\s?] [NC]
+RewriteRule ^fleto\.html$ /Portifolio/plataforma-fleto [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Portifolio/bi-indicadores\.html[\s?] [NC]
+RewriteRule ^bi-indicadores\.html$ /Portifolio/dashboard-gerencial [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Portifolio/comercial\.html[\s?] [NC]
+RewriteRule ^comercial\.html$ /Portifolio/metas-comerciais [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Portifolio/minutas\.html[\s?] [NC]
+RewriteRule ^minutas\.html$ /Portifolio/controle-minutas [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Portifolio/transporte\.html[\s?] [NC]
+RewriteRule ^transporte\.html$ /Portifolio/portal-transporte [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Portifolio/rastreio-esl\.html[\s?] [NC]
+RewriteRule ^rastreio-esl\.html$ /Portifolio/rastreio-transportadoras [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Portifolio/rastreio-comprovante\.html[\s?] [NC]
+RewriteRule ^rastreio-comprovante\.html$ /Portifolio/comprovante-entrega [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Portifolio/calculadora-frete\.html[\s?] [NC]
+RewriteRule ^calculadora-frete\.html$ /Portifolio/calculadora-frete [R=301,L]
+
+
+# =========================================================
+# ROTAS BONITAS DO PORTFOLIO
+# =========================================================
+
+RewriteRule ^automacao-comprovantes/?$ baixa-comprovante.html [L]
+RewriteRule ^plataforma-fleto/?$ fleto.html [L]
+RewriteRule ^dashboard-gerencial/?$ bi-indicadores.html [L]
+RewriteRule ^metas-comerciais/?$ comercial.html [L]
+RewriteRule ^controle-minutas/?$ minutas.html [L]
+RewriteRule ^portal-transporte/?$ transporte.html [L]
+RewriteRule ^rastreio-transportadoras/?$ rastreio-esl.html [L]
+RewriteRule ^comprovante-entrega/?$ rastreio-comprovante.html [L]
+RewriteRule ^calculadora-frete/?$ calculadora-frete.html [L]
+
+
+# =========================================================
+# REMOVE .PHP E .HTML DE QUALQUER OUTRA PAGINA
+# So quando digitarem a extensao diretamente
+# =========================================================
+
+RewriteCond %{THE_REQUEST} \s/+Portifolio/([^\s?]+)\.php[\s?] [NC]
+RewriteRule ^(.+)\.php$ /Portifolio/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+Portifolio/([^\s?]+)\.html[\s?] [NC]
+RewriteRule ^(.+)\.html$ /Portifolio/$1 [R=301,L]
+
+
+# =========================================================
+# PERMITE ACESSAR OUTROS ARQUIVOS SEM .PHP OU .HTML
+# =========================================================
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+
+# =========================================================
+# PROTECAO BASICA
+# =========================================================
+
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>

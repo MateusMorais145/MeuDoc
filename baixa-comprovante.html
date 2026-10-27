@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Case | Bot de Baixa de Comprovantes</title>
+
+  <meta
+    name="description"
+    content="Case de automação desenvolvido por Mateus Morais, criador da Fleto. Bot para consulta de notas em trânsito, busca de comprovantes em transportadoras e baixa automática no sistema do cliente."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="case-baixa-comprovante.css" />
+</head>
+
+<body>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <div class="page-bg" aria-hidden="true">
+    <div class="noise"></div>
+    <div class="grid-bg"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+  </div>
+
+  <aside class="side-rail" aria-label="Identidade lateral">
+    <a href="index.php" class="rail-logo">FLETO</a>
+    <span></span>
+    <p>Case técnico</p>
+  </aside>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="index.php" class="brand" aria-label="Voltar para página inicial">
+        <span>Mateus</span>
+        <strong>Morais</strong>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.php">Início</a></li>
+          <li><a href="#desafio">Desafio</a></li>
+          <li><a href="#solucao">Solução</a></li>
+          <li><a href="#processo">Processo</a></li>
+          <li><a href="#resultado">Resultado</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">Automação logística · Fleto</p>
+
+          <h1>
+            Bot de baixa automática de comprovantes.
+          </h1>
+
+          <p class="hero-description">
+            Uma automação criada para consultar notas em trânsito diretamente na base de dados
+            do cliente, buscar comprovantes no portal da transportadora e atualizar o sistema
+            automaticamente quando a mercadoria é entregue.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#processo" class="btn btn-primary">Ver processo em execução</a>
+            <a href="#resultado" class="btn btn-ghost">Ver impacto</a>
+          </div>
+        </div>
+
+        <div class="case-hero-panel">
+          <div class="panel-top">
+            <span></span>
+            <p>case.status</p>
+          </div>
+
+          <div class="panel-content">
+            <small>Projeto</small>
+
+            <strong>Baixa de comprovantes</strong>
+
+            <div class="panel-tags">
+              <span>BOT</span>
+              <span>LOGÍSTICA</span>
+              <span>BANCO DE DADOS</span>
+              <span>PORTAL TRANSPORTADORA</span>
+            </div>
+
+            <div class="panel-metric">
+              <strong>Equipe → Bot</strong>
+
+              <p>
+                Uma rotina antes executada por uma equipe passou a ser conduzida
+                automaticamente, com acompanhamento e manutenção preventiva.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="impact-strip">
+        <article>
+          <span>01</span>
+          <strong>Consulta automática</strong>
+          <p>
+            Busca notas com status <b>EM TRÂNSITO</b> diretamente na base do cliente.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <strong>Validação na transportadora</strong>
+          <p>
+            Consulta o portal da transportadora para verificar entrega e localizar o comprovante.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <strong>Baixa no sistema</strong>
+          <p>
+            Salva o comprovante e marca a nota como <b>ENTREGUE</b> no sistema do cliente.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="desafio">
+        <div class="section-kicker">O desafio</div>
+
+        <div class="text-grid">
+          <h2>
+            Uma rotina operacional crítica, repetitiva e dependente de acompanhamento manual.
+          </h2>
+
+          <div class="rich-text">
+            <p>
+              O processo de baixa de comprovantes exigia que uma equipe consultasse notas,
+              verificasse o status da entrega em portais de transportadoras, salvasse os arquivos
+              corretos e atualizasse manualmente o sistema do cliente.
+            </p>
+
+            <p>
+              Por ser uma rotina recorrente e sensível para a operação logística, qualquer atraso
+              ou falha impactava diretamente a visibilidade das entregas, o acompanhamento do setor
+              responsável e a capacidade de antecipar problemas com transportadoras e clientes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section solution-section" id="solucao">
+        <div class="section-kicker">A solução</div>
+
+        <div class="solution-layout">
+          <div>
+            <h2>
+              Um bot programado para assumir a rotina completa.
+            </h2>
+
+            <p>
+              O bot foi desenvolvido para executar a rotina de ponta a ponta: identificar notas
+              em trânsito, consultar a transportadora, verificar se a mercadoria foi entregue,
+              salvar o comprovante e atualizar o sistema do cliente com o status correto.
+            </p>
+
+            <p>
+              A execução acontece de forma programada, nos horários definidos pelo cliente,
+              garantindo que a operação comece o dia com as informações atualizadas e com menos
+              trabalho operacional acumulado.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span>Fluxo automatizado</span>
+
+            <ol>
+              <li>Consulta notas em trânsito na base do cliente.</li>
+              <li>Acessa o site da transportadora.</li>
+              <li>Verifica se a mercadoria foi entregue.</li>
+              <li>Baixa e salva o comprovante.</li>
+              <li>Sobe o documento no sistema do cliente.</li>
+              <li>Marca a nota como entregue.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section proof-section" id="processo">
+        <div class="section-kicker">Processo em execução</div>
+
+        <div class="proof-intro">
+          <h2>
+            Da base de dados ao comprovante finalizado, tudo acontece em uma rotina automatizada.
+          </h2>
+
+          <p>
+            As imagens abaixo mostram partes reais do funcionamento: extração de pedidos,
+            processamento no terminal, envio para o sistema do cliente e armazenamento dos
+            comprovantes já baixados.
+          </p>
+        </div>
+
+        <div class="proof-flow">
+          <article class="proof-item proof-item-large">
+            <div class="proof-text">
+              <span>01 · Extração da base</span>
+
+              <h3>O bot inicia consultando a base do cliente.</h3>
+
+              <p>
+                A rotina começa extraindo os pedidos dos últimos dias e identificando quais notas
+                ainda estão com status de acompanhamento. A partir disso, o bot prepara a base local
+                e organiza os pares de pedido e nota fiscal que serão consultados.
+              </p>
+            </div>
+
+            <div class="proof-image proof-image-terminal">
+              <img src="assets/baixa_comprovante1.png" alt="Terminal do bot extraindo pedidos da base de dados" />
+            </div>
+          </article>
+
+          <article class="proof-item proof-item-reverse">
+            <div class="proof-text">
+              <span>02 · Processamento e baixa</span>
+
+              <h3>Quando a entrega é confirmada, o comprovante é enviado ao sistema.</h3>
+
+              <p>
+                Após localizar o comprovante no portal da transportadora, o bot envia o arquivo
+                para o sistema do cliente, valida o retorno da API e registra a nota como entregue.
+                O processo é concluído com logs de sucesso para acompanhamento e manutenção.
+              </p>
+            </div>
+
+            <div class="proof-image proof-image-api">
+              <img src="assets/baixa_comprovante.png" alt="Retorno da API confirmando envio do comprovante" />
+            </div>
+          </article>
+
+          <article class="proof-item proof-item-large">
+            <div class="proof-text">
+              <span>03 · Volume operacional</span>
+
+              <h3>Milhares de comprovantes organizados sem operação manual diária.</h3>
+
+              <p>
+                Os comprovantes baixados são salvos, organizados e movidos para a pasta de finalizados.
+                Essa etapa mostra o impacto real da automação: uma rotina que antes dependia de equipe
+                passa a ser executada de forma programada e rastreável.
+              </p>
+            </div>
+
+            <div class="proof-image proof-image-folder">
+              <img src="assets/baixa_comprovante2.png" alt="Pasta com milhares de comprovantes finalizados" />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section result-section" id="resultado">
+        <div class="section-kicker">Resultado</div>
+
+        <div class="result-card">
+          <div>
+            <h2>
+              A equipe deixou de executar a rotina manualmente e passou a atuar de forma mais estratégica.
+            </h2>
+
+            <p>
+              Em pouco tempo, o bot dominou a função operacional que antes dependia de uma equipe.
+              Hoje, a atuação humana fica concentrada no acompanhamento, qualidade da entrega
+              e antecipação de possíveis problemas com transportadoras e clientes.
+            </p>
+          </div>
+
+          <div class="result-list">
+            <article>
+              <span>Menos retrabalho</span>
+              <p>Redução de tarefas repetitivas e operacionais.</p>
+            </article>
+
+            <article>
+              <span>Mais visibilidade</span>
+              <p>Notas atualizadas com comprovantes e status correto.</p>
+            </article>
+
+            <article>
+              <span>Rotina programada</span>
+              <p>Execuções automáticas nos horários solicitados pelo cliente.</p>
+            </article>
+
+            <article>
+              <span>Foco em qualidade</span>
+              <p>Equipe liberada para tratar exceções e melhorar a entrega.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">Projeto parecido?</p>
+
+            <h2>
+              Sua empresa ainda depende de alguém repetindo a mesma rotina todos os dias?
+            </h2>
+
+            <p>
+              Esse tipo de processo pode ser mapeado, automatizado e transformado em uma solução
+              sob medida para sua operação.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              href="https://wa.me/554491842745"
+              class="btn btn-primary"
+            >
+              Conversar com Mateus
+            </a>
+
+            <a href="index.php" class="btn btn-ghost">
+              Voltar ao portfólio
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 · Mateus Morais</p>
+      <p>Criador da Fleto</p>
+    </footer>
+  </div>
+
+  <script>
+    const cursorLight = document.querySelector(".cursor-light");
+
+    window.addEventListener("mousemove", (event) => {
+      cursorLight.style.left = `${event.clientX}px`;
+      cursorLight.style.top = `${event.clientY}px`;
+    });
+
+    const animatedElements = document.querySelectorAll(
+      ".case-hero-copy, .case-hero-panel, .impact-strip article, .text-grid, .solution-layout, .proof-intro, .proof-item, .result-card, .contact-card"
+    );
+
+    animatedElements.forEach((element) => {
+      element.classList.add("reveal");
+    });
+
+    let lastScrollY = window.scrollY;
+
+    function updateScrollDirection() {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        document.body.classList.add("scroll-down");
+        document.body.classList.remove("scroll-up");
+      } else {
+        document.body.classList.add("scroll-up");
+        document.body.classList.remove("scroll-down");
+      }
+
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener("scroll", updateScrollDirection, { passive: true });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
+
+    animatedElements.forEach((element) => observer.observe(element));
+
+    window.addEventListener("load", () => {
+      document.body.classList.add("scroll-down");
+    });
+  </script>
+</body>
+</html>

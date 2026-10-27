@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Case | Rastreio de Comprovante de Entrega</title>
+
+  <meta
+    name="description"
+    content="Ferramenta para consulta de baixa de comprovante de entrega, reduzindo cobranças manuais no WhatsApp e dando autonomia ao cliente final."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="rastreio-comprovante.css" />
+</head>
+
+<body>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <div class="page-bg" aria-hidden="true">
+    <div class="noise"></div>
+    <div class="grid-bg"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+  </div>
+
+  <aside class="side-rail" aria-label="Identidade lateral">
+    <a href="index.php" class="rail-logo">FLETO</a>
+    <span></span>
+    <p>Comprovante entrega</p>
+  </aside>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="index.php" class="brand" aria-label="Voltar para página inicial">
+        <span>Mateus</span>
+        <strong>Morais</strong>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.php">Início</a></li>
+          <li><a href="#desafio">Desafio</a></li>
+          <li><a href="#solucao">Solução</a></li>
+          <li><a href="#funcionamento">Funcionamento</a></li>
+          <li><a href="#resultado">Resultado</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">Comprovante · Entrega · Consulta online</p>
+
+          <h1>
+            Menos cobrança manual. Mais autonomia para consultar comprovantes.
+          </h1>
+
+          <p class="hero-description">
+            Ferramenta desenvolvida para permitir que o cliente consulte a situação da baixa
+            do comprovante de entrega sem depender de mensagens no WhatsApp, ligações ou
+            acompanhamento manual da equipe da transportadora.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#funcionamento" class="btn btn-primary">Ver funcionamento</a>
+            <a href="#resultado" class="btn btn-ghost">Ver impacto</a>
+          </div>
+
+          <div class="hero-points">
+            <div>
+              <strong>Cliente</strong>
+              <span>consulta sozinho</span>
+            </div>
+
+            <div>
+              <strong>Comprovante</strong>
+              <span>status de baixa</span>
+            </div>
+
+            <div>
+              <strong>Atendimento</strong>
+              <span>menos cobrança repetitiva</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-proof" aria-label="Representação visual da consulta de comprovante">
+          <div class="proof-frame">
+            <div class="proof-top">
+              <span></span>
+              <p>delivery.proof</p>
+            </div>
+
+            <div class="proof-body">
+              <div class="proof-title">
+                <small>Consulta de entrega</small>
+                <strong>Comprovante online</strong>
+              </div>
+
+              <div class="proof-form">
+                <label>
+                  <span>Token / acesso do cliente</span>
+                  <div>••••••••••••••</div>
+                </label>
+
+                <label>
+                  <span>Nota fiscal / pedido</span>
+                  <div>000000</div>
+                </label>
+
+                <button>Consultar comprovante</button>
+              </div>
+
+              <div class="proof-status">
+                <div class="status-line done">
+                  <span></span>
+                  <p>Mercadoria entregue</p>
+                </div>
+
+                <div class="status-line active">
+                  <span></span>
+                  <p>Comprovante localizado</p>
+                </div>
+
+                <div class="status-line done">
+                  <span></span>
+                  <p>Baixa registrada</p>
+                </div>
+
+                <div class="status-line">
+                  <span></span>
+                  <p>Documento disponível para consulta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-one">
+            <span>Cliente final</span>
+            <strong>acompanha a baixa do comprovante</strong>
+          </div>
+
+          <div class="floating-card floating-card-two">
+            <span>Transportadora</span>
+            <strong>reduz cobranças operacionais</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="position-section">
+        <p>
+          Para transportadoras que recebem cobranças constantes sobre comprovantes de entrega
+          e querem oferecer uma consulta simples, segura e online para seus clientes.
+        </p>
+
+        <div>
+          <span>Comprovante</span>
+          <span>Entrega</span>
+          <span>Baixa</span>
+          <span>Cliente final</span>
+          <span>Consulta online</span>
+        </div>
+      </section>
+
+      <section class="impact-strip">
+        <article>
+          <span>01</span>
+          <strong>Consulta sem atendimento manual</strong>
+          <p>
+            O cliente pode verificar a situação do comprovante sem chamar a transportadora a cada pedido.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <strong>Status da baixa</strong>
+          <p>
+            A ferramenta mostra se a entrega foi localizada, se o comprovante foi baixado
+            e se a informação já está disponível.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <strong>Mais organização</strong>
+          <p>
+            A transportadora reduz cobranças repetitivas e mantém uma experiência mais profissional
+            para o cliente final.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="desafio">
+        <div class="section-kicker">O desafio</div>
+
+        <div class="text-grid">
+          <h2>
+            Clientes cobravam comprovantes de entrega de forma repetitiva, gerando retrabalho na operação.
+          </h2>
+
+          <div class="rich-text">
+            <p>
+              Depois que a mercadoria é entregue, é comum que clientes passem a cobrar o comprovante
+              de entrega para finalizar processos internos, conferir recebimento ou manter o controle
+              documental da operação.
+            </p>
+
+            <p>
+              Sem uma ferramenta de consulta, essas solicitações acabam chegando por WhatsApp, telefone
+              ou e-mail, exigindo que alguém da transportadora verifique manualmente a situação da entrega
+              e do comprovante.
+            </p>
+
+            <p>
+              O desafio foi criar uma forma simples para o cliente consultar a situação da baixa do
+              comprovante, reduzindo dependência do atendimento e dando mais autonomia ao cliente final.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section solution-section" id="solucao">
+        <div class="section-kicker">A solução</div>
+
+        <div class="solution-layout">
+          <div>
+            <h2>
+              Uma ferramenta online para consultar o status do comprovante de entrega.
+            </h2>
+
+            <p>
+              A solução permite que o cliente consulte a situação do comprovante a partir dos dados
+              da carga, pedido ou nota fiscal. Em vez de solicitar manualmente para a transportadora,
+              ele acessa a ferramenta e verifica se o comprovante já foi localizado, baixado ou
+              disponibilizado.
+            </p>
+
+            <p>
+              A ferramenta pode trabalhar com controle por token ou acesso individualizado, mantendo
+              a segurança da informação e separando a consulta por cliente.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span>Fluxo da consulta</span>
+
+            <ol>
+              <li>Cliente acessa a ferramenta online.</li>
+              <li>Informa seu token ou acesso autorizado.</li>
+              <li>Informa nota fiscal, pedido ou referência da carga.</li>
+              <li>Ferramenta consulta a situação do comprovante.</li>
+              <li>Status da baixa é exibido ao cliente.</li>
+              <li>Transportadora reduz atendimento manual repetitivo.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section flow-section" id="funcionamento">
+        <div class="section-kicker">Funcionamento</div>
+
+        <div class="flow-intro">
+          <h2>
+            O cliente consulta o comprovante. A equipe deixa de responder a mesma pergunta várias vezes.
+          </h2>
+
+          <p>
+            A ferramenta foi pensada para uma necessidade objetiva: dar visibilidade sobre a baixa
+            do comprovante de entrega, evitando que a operação seja interrompida por cobranças manuais.
+          </p>
+        </div>
+
+        <div class="flow-grid">
+          <article class="flow-card large">
+            <span>01</span>
+            <h3>Consulta por cliente</h3>
+            <p>
+              Cada cliente pode consultar suas próprias entregas de forma segura, usando token,
+              acesso autorizado ou uma versão personalizada da ferramenta.
+            </p>
+          </article>
+
+          <article class="flow-card">
+            <span>02</span>
+            <h3>Busca do comprovante</h3>
+            <p>
+              A ferramenta verifica se a entrega possui comprovante localizado, baixado ou pendente
+              de disponibilidade.
+            </p>
+          </article>
+
+          <article class="flow-card">
+            <span>03</span>
+            <h3>Status claro</h3>
+            <p>
+              O cliente visualiza a situação atual sem precisar pedir atualização para alguém da operação.
+            </p>
+          </article>
+
+          <article class="flow-card wide">
+            <span>04</span>
+            <h3>Versão personalizada para transportadoras</h3>
+            <p>
+              Para transportadoras interessadas, a ferramenta pode ser personalizada para eliminar
+              etapas manuais do cliente, mantendo segurança e oferecendo uma experiência mais simples
+              e profissional.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section mock-section">
+        <div class="section-kicker">Representação da ferramenta</div>
+
+        <div class="mock-panel">
+          <div class="mock-header">
+            <div>
+              <span>PROOF.TRACKING</span>
+              <strong>Consulta de comprovante</strong>
+            </div>
+
+            <p>acesso protegido</p>
+          </div>
+
+          <div class="mock-content">
+            <div class="mock-form">
+              <div>
+                <small>Cliente</small>
+                <strong>Acesso autorizado</strong>
+              </div>
+
+              <div>
+                <small>Nota fiscal</small>
+                <strong>000000</strong>
+              </div>
+
+              <button>Consultar baixa</button>
+            </div>
+
+            <div class="mock-timeline">
+              <article class="done">
+                <span></span>
+                <div>
+                  <strong>Entrega confirmada</strong>
+                  <p>Mercadoria entregue ao destinatário.</p>
+                </div>
+              </article>
+
+              <article class="done">
+                <span></span>
+                <div>
+                  <strong>Comprovante encontrado</strong>
+                  <p>Documento localizado na rotina de baixa.</p>
+                </div>
+              </article>
+
+              <article class="active">
+                <span></span>
+                <div>
+                  <strong>Baixa disponível</strong>
+                  <p>Cliente pode acompanhar a situação atual.</p>
+                </div>
+              </article>
+
+              <article>
+                <span></span>
+                <div>
+                  <strong>Histórico</strong>
+                  <p>Consulta registrada para acompanhamento.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="mock-side">
+              <article>
+                <small>Atendimento reduzido</small>
+                <strong>WhatsApp</strong>
+                <p>Menos cobranças manuais.</p>
+              </article>
+
+              <article>
+                <small>Documento</small>
+                <strong>Entrega</strong>
+                <p>Status do comprovante.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section security-section">
+        <div class="section-kicker">Segurança e evolução</div>
+
+        <div class="security-grid">
+          <article class="security-card">
+            <span>Modelo com token</span>
+            <h3>Consulta separada por cliente</h3>
+            <p>
+              O acesso pode ser feito com token individual, permitindo que cada cliente consulte
+              somente informações relacionadas à sua operação.
+            </p>
+          </article>
+
+          <article class="security-card highlight">
+            <span>Modelo personalizado</span>
+            <h3>Consulta mais simples para o cliente final</h3>
+            <p>
+              Em uma versão personalizada para a transportadora, a experiência pode ser simplificada,
+              evitando que o cliente precise informar o token em toda consulta.
+            </p>
+          </article>
+
+          <article class="security-card">
+            <span>Benefício</span>
+            <h3>Experiência mais profissional</h3>
+            <p>
+              A transportadora oferece ao cliente uma consulta direta, organizada e com menos atrito,
+              reduzindo dependência de atendimento manual.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="before-after-section">
+        <div class="section-kicker">Antes e depois</div>
+
+        <div class="before-after-grid">
+          <article class="before-card">
+            <span>Antes da ferramenta</span>
+
+            <ul>
+              <li>Cliente chamava para saber se o comprovante já estava disponível.</li>
+              <li>Equipe precisava consultar manualmente a situação da entrega.</li>
+              <li>Atendimento repetitivo consumia tempo operacional.</li>
+              <li>Cobranças ficavam espalhadas em WhatsApp, e-mail ou telefone.</li>
+              <li>Cliente dependia da resposta da transportadora.</li>
+            </ul>
+          </article>
+
+          <article class="after-card">
+            <span>Com a ferramenta</span>
+
+            <ul>
+              <li>Cliente consulta o status do comprovante online.</li>
+              <li>Transportadora reduz cobranças manuais.</li>
+              <li>Consulta pode ser protegida por token ou acesso individualizado.</li>
+              <li>Informação fica mais clara e acessível.</li>
+              <li>Possibilidade de versão personalizada para clientes da transportadora.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section result-section" id="resultado">
+        <div class="section-kicker">Resultado</div>
+
+        <div class="result-card">
+          <div>
+            <h2>
+              A consulta de comprovantes deixa de ser uma rotina manual e passa a ser uma experiência online.
+            </h2>
+
+            <p>
+              A ferramenta reduz a necessidade de atendimento humano para perguntas repetitivas sobre
+              comprovante de entrega, permitindo que o cliente acompanhe a situação de forma mais autônoma.
+            </p>
+
+            <p>
+              Para a transportadora, isso significa menos interrupções, mais organização e uma percepção
+              mais profissional no relacionamento com o cliente final.
+            </p>
+          </div>
+
+          <div class="result-list">
+            <article>
+              <span>Mais autonomia</span>
+              <p>Cliente consulta a situação do comprovante por conta própria.</p>
+            </article>
+
+            <article>
+              <span>Menos atendimento</span>
+              <p>Redução de chamadas repetitivas sobre baixa de comprovante.</p>
+            </article>
+
+            <article>
+              <span>Mais organização</span>
+              <p>Consulta online com status mais claro para o cliente.</p>
+            </article>
+
+            <article>
+              <span>Mais valor comercial</span>
+              <p>Ferramenta pode ser personalizada para transportadoras interessadas.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">Projeto parecido?</p>
+
+            <h2>
+              Sua transportadora ainda recebe cobranças manuais sobre comprovante de entrega?
+            </h2>
+
+            <p>
+              Uma ferramenta de consulta pode reduzir atendimento repetitivo, melhorar a experiência
+              do cliente e deixar sua operação mais organizada.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              href="https://wa.me/554491842745"
+              class="btn btn-primary"
+            >
+              Conversar sobre comprovantes
+            </a>
+
+            <a href="index.php" class="btn btn-ghost">
+              Voltar ao portfólio
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 · Mateus Morais</p>
+      <p>Comprovantes, rastreio e automações web</p>
+    </footer>
+  </div>
+
+  <script>
+    const cursorLight = document.querySelector(".cursor-light");
+
+    window.addEventListener("mousemove", (event) => {
+      cursorLight.style.left = `${event.clientX}px`;
+      cursorLight.style.top = `${event.clientY}px`;
+    });
+
+    const animatedElements = document.querySelectorAll(
+      ".case-hero-copy, .hero-proof, .floating-card, .position-section, .impact-strip article, .text-grid, .solution-layout, .flow-intro, .flow-card, .mock-panel, .security-card, .before-after-grid, .result-card, .contact-card"
+    );
+
+    animatedElements.forEach((element) => {
+      element.classList.add("reveal");
+    });
+
+    let lastScrollY = window.scrollY;
+
+    function updateScrollDirection() {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        document.body.classList.add("scroll-down");
+        document.body.classList.remove("scroll-up");
+      } else {
+        document.body.classList.add("scroll-up");
+        document.body.classList.remove("scroll-down");
+      }
+
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener("scroll", updateScrollDirection, { passive: true });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
+
+    animatedElements.forEach((element) => observer.observe(element));
+
+    window.addEventListener("load", () => {
+      document.body.classList.add("scroll-down");
+    });
+  </script>
+</body>
+</html>

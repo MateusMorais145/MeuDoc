@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Case | Portal do Setor de Transporte</title>
+
+  <meta
+    name="description"
+    content="Case de portal web desenvolvido para o setor de transporte, com tratativas de pedidos, aprovação de custos adicionais, controle operacional e alimentação de Power BI gerencial."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="transporte.css" />
+</head>
+
+<body>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <div class="page-bg" aria-hidden="true">
+    <div class="noise"></div>
+    <div class="grid-bg"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+  </div>
+
+  <aside class="side-rail" aria-label="Identidade lateral">
+    <a href="index.php" class="rail-logo">FLETO</a>
+    <span></span>
+    <p>Portal transporte</p>
+  </aside>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="index.php" class="brand" aria-label="Voltar para página inicial">
+        <span>Mateus</span>
+        <strong>Morais</strong>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.php">Início</a></li>
+          <li><a href="#desafio">Desafio</a></li>
+          <li><a href="#solucao">Solução</a></li>
+          <li><a href="#modulos">Módulos</a></li>
+          <li><a href="#powerbi">Power BI</a></li>
+          <li><a href="#resultado">Resultado</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="case-hero">
+        <div class="case-hero-copy">
+          <p class="eyebrow">Portal web · Transporte · Power BI</p>
+
+          <h1>
+            Um portal operacional completo para o setor de transporte.
+          </h1>
+
+          <p class="hero-description">
+            Sistema web desenvolvido para centralizar tratativas de pedidos, controle de transportadoras,
+            custos adicionais, aprovações, registros operacionais e dados que alimentam automaticamente
+            um Power BI gerencial da área de transporte.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#modulos" class="btn btn-primary">Ver módulos do portal</a>
+            <a href="#powerbi" class="btn btn-ghost">Ver análise gerencial</a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <strong>Pedidos</strong>
+              <span>tratativas e acompanhamento</span>
+            </div>
+
+            <div>
+              <strong>Custos</strong>
+              <span>aprovação e histórico</span>
+            </div>
+
+            <div>
+              <strong>BI</strong>
+              <span>indicadores automatizados</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-portal" aria-label="Tela de login do portal de transporte">
+          <div class="login-frame">
+            <img src="assets/transp1.png" alt="Tela de login do portal do setor de transporte" />
+
+            <div class="frame-badge">
+              <span>TRANSPORTE.PORTAL</span>
+              <strong>acesso protegido por login</strong>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-one">
+            <span>Operação</span>
+            <strong>pedidos, prazos e tratativas</strong>
+          </div>
+
+          <div class="floating-card floating-card-two">
+            <span>Gestão</span>
+            <strong>dados para Power BI</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="position-section">
+        <p>
+          Para equipes de transporte que precisam controlar pedidos, atrasos, prazos, custos adicionais,
+          transportadoras e indicadores sem depender de planilhas, mensagens soltas ou controles paralelos.
+        </p>
+
+        <div>
+          <span>Tratativas</span>
+          <span>Custos</span>
+          <span>Transportadoras</span>
+          <span>Power BI</span>
+          <span>Operação</span>
+        </div>
+      </section>
+
+      <section class="impact-strip">
+        <article>
+          <span>01</span>
+          <strong>Registro operacional</strong>
+          <p>
+            O portal centraliza informações de pedidos, tratativas, agendamentos, carregamentos,
+            bloqueios, retiradas e situações que precisam de acompanhamento.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <strong>Aprovação de custos</strong>
+          <p>
+            Custos adicionais entram em fluxo de solicitação, análise, aprovação, reprovação,
+            reenvio e histórico por usuário.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <strong>Base para Power BI</strong>
+          <p>
+            As informações registradas no portal alimentam análises gerenciais sobre transportadoras,
+            pedidos em atraso, pedidos no prazo e desempenho operacional.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="desafio">
+        <div class="section-kicker">O desafio</div>
+
+        <div class="text-grid">
+          <h2>
+            O setor de transporte precisava sair do controle fragmentado e ganhar uma base única de operação.
+          </h2>
+
+          <div class="rich-text">
+            <p>
+              Antes do portal, as informações de transporte ficavam dependentes de controles manuais,
+              acompanhamento individual, consultas em sistemas e comunicação espalhada entre pessoas
+              da operação.
+            </p>
+
+            <p>
+              Isso dificultava a visão gerencial sobre o que estava acontecendo: quais pedidos estavam
+              em atraso, quais ainda estavam dentro do prazo, quais transportadoras estavam envolvidas,
+              quais custos adicionais precisavam de aprovação e quais tratativas estavam em andamento.
+            </p>
+
+            <p>
+              O objetivo foi criar um ambiente web para registrar a operação, controlar acessos,
+              organizar os dados e gerar uma base confiável para análise no Power BI.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section solution-section" id="solucao">
+        <div class="section-kicker">A solução</div>
+
+        <div class="solution-layout">
+          <div>
+            <h2>
+              Um portal web conectado à rotina real do transporte.
+            </h2>
+
+            <p>
+              O sistema foi desenvolvido para o uso diário do setor, reunindo em uma única plataforma
+              as principais etapas da rotina: cadastro de tratativas, atualização de pedidos, consulta
+              da base, solicitação de custos adicionais e aprovação administrativa.
+            </p>
+
+            <p>
+              Cada registro feito no portal passa a compor uma base operacional que pode ser analisada
+              posteriormente, permitindo criar indicadores de atraso, prazo, transportadora, custo,
+              responsável, volume de tratativas e performance da área.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <span>Principais capacidades</span>
+
+            <ol>
+              <li>Login com controle de sessão.</li>
+              <li>Cadastro e atualização de tratativas de pedidos.</li>
+              <li>Consulta da base operacional.</li>
+              <li>Solicitação de custos adicionais com anexos.</li>
+              <li>Aprovação e reprovação de custos por perfil administrativo.</li>
+              <li>Histórico e filtros por pedido, usuário, transportadora e status.</li>
+              <li>Base estruturada para Power BI gerencial.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section screens-section" id="experiencia">
+        <div class="section-kicker">Experiência do portal</div>
+
+        <div class="screens-intro">
+          <h2>
+            O portal foi pensado para ser operacional no detalhe e gerencial na visão.
+          </h2>
+
+          <p>
+            As telas mostram os principais pontos da solução: acesso ao sistema, painel administrativo
+            de aprovação de custos e tela principal do portal com a rotina completa do setor.
+          </p>
+        </div>
+
+        <div class="screen-flow">
+          <article class="screen-item screen-login-item">
+            <div class="screen-copy">
+              <span>01 · Acesso protegido</span>
+
+              <h3>Entrada no portal por login e senha.</h3>
+
+              <p>
+                O sistema foi criado com controle de acesso para proteger a operação e separar a
+                experiência conforme o perfil do usuário. A partir do login, cada pessoa entra no
+                ambiente adequado para registrar, consultar ou aprovar informações.
+              </p>
+            </div>
+
+            <div class="screen-image login-shot">
+              <img src="assets/transp1.png" alt="Tela de login do portal de transporte" />
+            </div>
+          </article>
+
+          <article class="screen-item screen-item-reverse">
+            <div class="screen-copy">
+              <span>02 · Aprovação de custos</span>
+
+              <h3>Custos adicionais com análise, aprovação e histórico.</h3>
+
+              <p>
+                O painel administrativo permite visualizar solicitações de custo adicional, filtrar
+                registros, revisar documentos, aprovar, reprovar e manter o histórico da decisão.
+                Isso reduz decisões informais e melhora o controle financeiro da operação.
+              </p>
+            </div>
+
+            <div class="screen-image wide-shot">
+              <img src="assets/transp2.png" alt="Painel de aprovação de custos adicionais do transporte" />
+            </div>
+          </article>
+
+          <article class="screen-item screen-index-item">
+            <div class="screen-copy">
+              <span>03 · Portal operacional</span>
+
+              <h3>Tratativas, base, agendamentos, custos e atalhos em um único ambiente.</h3>
+
+              <p>
+                A tela principal reúne a rotina operacional do setor de transporte, permitindo cadastrar
+                pedidos, acompanhar registros recentes, acessar base, custos adicionais, aprovações,
+                agendamentos e outros módulos conectados à operação.
+              </p>
+            </div>
+
+            <div class="screen-image full-shot">
+              <img src="assets/transp3.png" alt="Tela principal completa do portal de transporte" />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section modules-section" id="modulos">
+        <div class="section-kicker">Módulos do portal</div>
+
+        <div class="modules-intro">
+          <h2>
+            Um sistema modular para registrar operação, controlar exceções e gerar dados confiáveis.
+          </h2>
+
+          <p>
+            A força do portal está em transformar a rotina do setor em uma base organizada.
+            Cada módulo registra uma parte importante da operação e alimenta a visão gerencial.
+          </p>
+        </div>
+
+        <div class="modules-grid">
+          <article class="module-card large">
+            <span>01</span>
+            <h3>Gestão de pedidos e tratativas</h3>
+            <p>
+              Cadastro e atualização de pedidos com observações, carta de correção, agendamento,
+              data de carregamento, bloqueio financeiro, retira e aguardando agendamento.
+            </p>
+          </article>
+
+          <article class="module-card">
+            <span>02</span>
+            <h3>Base operacional</h3>
+            <p>
+              Consulta dos registros com filtros por pedido e usuário, permitindo acompanhar
+              o histórico das tratativas registradas.
+            </p>
+          </article>
+
+          <article class="module-card">
+            <span>03</span>
+            <h3>Custo adicional</h3>
+            <p>
+              Solicitação de custos por pedido ou nota fiscal, transportadora, valor, observação
+              e documento comprobatório.
+            </p>
+          </article>
+
+          <article class="module-card wide">
+            <span>04</span>
+            <h3>Aprovação administrativa</h3>
+            <p>
+              Fluxo para aprovar, reprovar e reenviar custos adicionais, com totais por status,
+              filtros, histórico e separação por perfil de acesso.
+            </p>
+          </article>
+
+          <article class="module-card wide">
+            <span>05</span>
+            <h3>Indicadores para Power BI</h3>
+            <p>
+              Os registros do portal formam uma base para analisar transportadoras, atrasos,
+              pedidos no prazo, custos, responsáveis e desempenho da operação.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section powerbi-section" id="powerbi">
+        <div class="section-kicker">Power BI gerencial</div>
+
+        <div class="bi-card">
+          <div>
+            <h2>
+              A operação registrada no portal vira análise gerencial automaticamente.
+            </h2>
+
+            <p>
+              O sistema não serve apenas para registrar dados. Ele cria uma base estruturada
+              para alimentar um Power BI gerencial, permitindo acompanhar tudo que está sendo feito
+              no setor de transporte.
+            </p>
+
+            <p>
+              A análise pode mostrar transportadoras mais acionadas, pedidos em atraso, pedidos ainda
+              dentro do prazo, custos adicionais pendentes, aprovados ou reprovados, volume de tratativas
+              por usuário e pontos de atenção da operação.
+            </p>
+          </div>
+
+          <div class="bi-visual" aria-label="Representação conceitual do Power BI">
+            <div class="bi-top">
+              <span>POWERBI.DATASET</span>
+              <strong>transporte gerencial</strong>
+            </div>
+
+            <div class="bi-kpis">
+              <article>
+                <small>Pedidos</small>
+                <strong>---</strong>
+              </article>
+
+              <article>
+                <small>No prazo</small>
+                <strong>--%</strong>
+              </article>
+
+              <article>
+                <small>Atrasados</small>
+                <strong>--%</strong>
+              </article>
+            </div>
+
+            <div class="bi-bars">
+              <span style="height: 42%"></span>
+              <span style="height: 68%"></span>
+              <span style="height: 54%"></span>
+              <span style="height: 86%"></span>
+              <span style="height: 63%"></span>
+              <span style="height: 78%"></span>
+            </div>
+
+            <div class="bi-list">
+              <div>
+                <span></span>
+                <p>Análise por transportadora</p>
+              </div>
+
+              <div>
+                <span></span>
+                <p>Pedidos em atraso ou no prazo</p>
+              </div>
+
+              <div>
+                <span></span>
+                <p>Custos adicionais por status</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="before-after-section">
+        <div class="section-kicker">Antes e depois</div>
+
+        <div class="before-after-grid">
+          <article class="before-card">
+            <span>Antes do portal</span>
+
+            <ul>
+              <li>Informações espalhadas em controles manuais e conversas.</li>
+              <li>Dificuldade para saber o que estava atrasado ou dentro do prazo.</li>
+              <li>Custos adicionais tratados sem fluxo centralizado.</li>
+              <li>Pouca rastreabilidade sobre quem registrou ou aprovou uma informação.</li>
+              <li>Base gerencial dependente de consolidação manual.</li>
+            </ul>
+          </article>
+
+          <article class="after-card">
+            <span>Com o portal</span>
+
+            <ul>
+              <li>Tratativas de pedidos registradas em sistema web.</li>
+              <li>Base única para consulta, filtros e acompanhamento.</li>
+              <li>Fluxo de custo adicional com aprovação e histórico.</li>
+              <li>Controle por login e perfil de usuário.</li>
+              <li>Dados estruturados para alimentar Power BI gerencial.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section result-section" id="resultado">
+        <div class="section-kicker">Resultado</div>
+
+        <div class="result-card">
+          <div>
+            <h2>
+              O setor de transporte passou a ter operação registrada, custos controlados e gestão baseada em dados.
+            </h2>
+
+            <p>
+              O portal deu ao setor uma base mais confiável para acompanhar pedidos, tratativas,
+              transportadoras, custos adicionais e pendências operacionais.
+            </p>
+
+            <p>
+              Com a alimentação automática do Power BI, a gestão consegue analisar o que está sendo
+              feito, identificar pedidos em atraso, acompanhar o que ainda está no prazo e enxergar
+              melhor a performance das transportadoras.
+            </p>
+          </div>
+
+          <div class="result-list">
+            <article>
+              <span>Mais controle</span>
+              <p>Pedidos, tratativas e custos concentrados em um ambiente web.</p>
+            </article>
+
+            <article>
+              <span>Mais rastreabilidade</span>
+              <p>Registros vinculados a usuários, status, datas e decisões.</p>
+            </article>
+
+            <article>
+              <span>Mais gestão</span>
+              <p>Base operacional preparada para análise em Power BI.</p>
+            </article>
+
+            <article>
+              <span>Mais velocidade</span>
+              <p>Menos consolidação manual e mais acesso direto à informação.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">Projeto parecido?</p>
+
+            <h2>
+              Seu setor ainda controla transporte em planilhas, mensagens e relatórios manuais?
+            </h2>
+
+            <p>
+              Um portal web pode centralizar a operação, organizar aprovações, registrar tratativas
+              e alimentar indicadores gerenciais automaticamente.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              href="https://wa.me/554491842745"
+              class="btn btn-primary"
+            >
+              Conversar sobre portal de transporte
+            </a>
+
+            <a href="index.php" class="btn btn-ghost">
+              Voltar ao portfólio
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 · Mateus Morais</p>
+      <p>Portais web, transporte, BI e automações</p>
+    </footer>
+  </div>
+
+  <script>
+    const cursorLight = document.querySelector(".cursor-light");
+
+    window.addEventListener("mousemove", (event) => {
+      cursorLight.style.left = `${event.clientX}px`;
+      cursorLight.style.top = `${event.clientY}px`;
+    });
+
+    const animatedElements = document.querySelectorAll(
+      ".case-hero-copy, .hero-portal, .floating-card, .position-section, .impact-strip article, .text-grid, .solution-layout, .screens-intro, .screen-item, .modules-intro, .module-card, .bi-card, .before-after-grid, .result-card, .contact-card"
+    );
+
+    animatedElements.forEach((element) => {
+      element.classList.add("reveal");
+    });
+
+    let lastScrollY = window.scrollY;
+
+    function updateScrollDirection() {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        document.body.classList.add("scroll-down");
+        document.body.classList.remove("scroll-up");
+      } else {
+        document.body.classList.add("scroll-up");
+        document.body.classList.remove("scroll-down");
+      }
+
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener("scroll", updateScrollDirection, { passive: true });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
+
+    animatedElements.forEach((element) => observer.observe(element));
+
+    window.addEventListener("load", () => {
+      document.body.classList.add("scroll-down");
+    });
+  </script>
+</body>
+</html>
